@@ -27,4 +27,9 @@ public class ProductController {
 	public String purchase(@RequestBody PurchaseReqDto purchaseReqDto) {
 		return productService.purchase(purchaseReqDto);
 	}
+
+	@PostMapping("/redisson/purchase")
+	public String redissonPurchase(@RequestBody PurchaseReqDto purchaseReqDto) {
+		return productService.redissonPurchase(purchaseReqDto);
+	}
 }
